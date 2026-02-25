@@ -1,0 +1,64 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f6f5f3;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+
+
+div {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+form {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+form input[type="text"],
+form textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+form button[type="submit"] {
+    padding: 15px;
+    background-color: #27ae60;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+form button[type="submit"]:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
+}
+
+p a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #27ae60;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}

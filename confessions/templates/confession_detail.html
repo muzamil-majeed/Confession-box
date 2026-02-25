@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Confession Detail
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'confessions/confession_detail.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="detail-container">
+    <h2>Confession</h2>
+
+    <p>{{ confession.content }}</p>
+
+    <small>{{ confession.created_at }}</small>
+
+    <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
+</div>
+{% endblock %}

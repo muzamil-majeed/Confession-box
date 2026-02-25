@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    Confessions
+{% endblock %}
+
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'confessions/home.css' %}">
+
+{% endblock %}
+
+
+
+{% block content %}
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+<div class="container">
+
+    {% if confessions %}
+        {% for confession in confessions %}
+            <div class="confession-card">
+                <p>
+                    {{ confession.content|truncatewords:25 }}
+                </p>
+
+                <a href="{% url 'confession-detail' confession.id %}" class="read-more">
+                    Read more
+                </a>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="empty-message">
+            No confessions yet. Be the first one!
+        </p>
+    {% endif %}
+
+
+</div>
+
+{% endblock %}

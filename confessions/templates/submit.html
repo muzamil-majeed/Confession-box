@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+
+    Make Confession
+{% endblock %}  
+
+
+{% block css_files %}
+     <link rel="stylesheet" href="{% static 'confessions/submit.css' %}">
+{% endblock %}
+
+
+
+{% block content %}
+        <div>   
+            <form method="POST">
+                {%  csrf_token %}
+                {{form.as_p}}
+                <button type=submit>Submit Confession</button>
+            </form>
+
+            <p><a href="{% url 'home' %}">Home</a></p>
+            
+        </div>
+{% endblock %}

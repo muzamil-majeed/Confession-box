@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{% static 'confessions/base.css' %}">
+    {% block css_files %}{% endblock %}
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <div class="brand">
+            <h1>Anonymous Confession Box</h1>
+            <p>Share your secrets anonymously</p>
+        </div>
+
+        <nav class="nav-links">
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'submit-confession' %}" class="nav-btn">Submit</a>
+        </nav>
+    </div>
+</header>
+
+<main class="page-content">
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>

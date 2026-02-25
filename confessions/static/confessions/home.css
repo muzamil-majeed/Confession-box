@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e5e7eb;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+}
+
+header h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+header p {
+    margin-top: 0.6rem;
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+}
+
+.confession-card {
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 1.6rem;
+    margin-bottom: 1.2rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.confession-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.confession-card p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #f1f5f9;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #38bdf8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.read-more:hover {
+    color: #7dd3fc;
+}
+
+.submit-btn {
+    display: inline-block;
+    margin-top: 2.5rem;
+    padding: 0.9rem 1.8rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: #020617;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(99, 102, 241, 0.45);
+}
+
+.alert {
+    max-width: 850px;
+    margin: 1rem auto;
+    padding: 0.9rem 1.2rem;
+    border-radius: 12px;
+    background: rgba(34, 197, 94, 0.15);
+    color: #bbf7d0;
+    text-align: center;
+}
+
+.empty-message {
+    text-align: center;
+    margin-top: 2rem;
+    color: #94a3b8;
+    font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .confession-card {
+        padding: 1.3rem;
+    }
+}
