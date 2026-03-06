@@ -12,3 +12,16 @@ class Confession(models.Model):
 
     def __str__(self):
         return self.content_title
+
+
+
+class Comment(models.Model):
+    confession = models.ForeignKey(Confession,on_delete=models.CASCADE,related_name="comments")
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"comment on confession {self.confession.id}"
+
+
+    

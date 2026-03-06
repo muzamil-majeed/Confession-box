@@ -111,3 +111,25 @@ header p {
         padding: 1.3rem;
     }
 }
+
+
+/* comments */
+
+
+.comment-badge {
+    display: inline-block;
+    margin-left: 12px;
+    padding: 5px 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border-radius: 999px;
+    background: rgba(79, 70, 229, 0.12);
+    color: #4f46e5;
+    backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+
+.comment-badge:hover {
+    background: rgba(79, 70, 229, 0.25);
+    transform: translateY(-2px);
+}

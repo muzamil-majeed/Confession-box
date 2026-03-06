@@ -10,12 +10,33 @@ Confession Detail
 {% endblock %}
 
 {% block content %}
+
+
 <div class="detail-container">
     <h2>Confession</h2>
-
     <p>{{ confession.content }}</p>
-
     <small>{{ confession.created_at }}</small>
+
+
+
+    <details>
+        <summary>View comments ({{ comments|length }})</summary>
+        {% for comment in comments %}
+            <div class="comment-card">
+                <p>{{ comment.content }}</p>
+                <small>{{ comment.created_at }}</small>
+            </div>
+        {% empty %}
+            <p>No comments yet</p>
+        {% endfor %}
+    </details>
+
+
+    <form method="post" class="comment-form">
+        {% csrf_token %}
+        {{ form.content }}
+        <button type="submit">Post Comment</button>
+    </form>
 
     <a href="{% url 'home' %}" class="back-link">← Back to Home</a>
 </div>

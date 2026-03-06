@@ -36,6 +36,9 @@
                 <a href="{% url 'confession-detail' confession.id %}" class="read-more">
                     Read more
                 </a>
+                <span class="comment-badge">
+                    {{ confession.comments.count }} Comments
+                </span>
             </div>
         {% endfor %}
     {% else %}
